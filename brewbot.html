@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewBot - simoni.dev</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <ol>
+            <li class="navbar-item"><a href="./index.html">Home</a>&nbsp;|&nbsp;</li>
+            <li class="navbar-item"><a href="#">BrewBot</a>&nbsp;|&nbsp;</li>
+            <li class="navbar-item"><a href="#" onclick="alert('Coming soon');">Jellyfin</a>&nbsp;|&nbsp;</li>
+            <li class="navbar-item"><a href="#" onclick="alert('Coming soon');">TuneSync</a></li>
+        </ol>
+    </nav>
+</header>
+<section class="content">
+    <div  class="portrait">
+        <img src="./assets/freebrew.png" alt="BrewBot">
+    </div>
+    <h1>BrewBot</h1>
+    <h2>Android Emulator Automation Software</h2>
+    <p><cite><a target="_blank" href="https://bitbucket.org/TSP_Disconnected/brewbot/src/master/">BrewBot</a></cite> was my first major brainchild. The idea was to make a program that could automate Android emulators, such as
+    BlueStacks and Nox, using image detection. Similar to the functionality of <cite><a target="_blank" href="https://mybot.run/">MyBot</a></cite>, but with the
+    ability to work with more than just one Android application. I also used this as an opportunity to get more comfortable with C/C++ and the
+    Win32 API. Unfortunately, I have let the application become abandon ware that I will return to sometime soon&trade;.</p>
+    <p>Originally, <cite>BrewBot</cite> used the same image detection libraries as <cite>MyBot</cite>, but due to shortcomings of that library I started moving
+    <cite>BrewBot</cite> to <cite>OpenCV</cite>. This move allowed for more complex operations; tracking object movement in a video or through a series
+    of images being one of the more important ones. I also implemented LUA script support so users can easily make their own scripts for other apps.</p>
+    <table>
+        <tr>
+            <th class="tr tb"></th>
+            <th class="tl tr tb">BrewBot</th>
+            <th class="tl tb">Competitors</th>
+        </tr>
+        <tr>
+            <td class="tr tb">Bugs</td>
+            <td class="tl tr tb">Honestly, A lot</td>
+            <td class="tl tb">Unknown</td>
+        </tr>
+        <tr>
+            <td class="tr tb">LUA Scripts</td>
+            <td class="tl tr tb">Yes</td>
+            <td class="tl tb">No</td>
+        </tr>
+        <tr>
+            <td class="tr tb">Actively Developed</td>
+            <td class="tl tr tb">No</td>
+            <td class="tl tb">Most likely, yes</td>
+        </tr>
+    </table>
+    <p>
+        I plan on rewriting <cite>BrewBot</cite> from scratch sometime in the future with a linux first mentality, using the Qt framework and true C++ principles.
+    </p>
+</section>
+<footer>
+    <p>Copyright &copy; 2021. Chris Simoni</p>
+</footer>
+</body>
+</html>
