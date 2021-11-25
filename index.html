@@ -1,76 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
+    <title>simoni.dev</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Home - simoni.dev</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-<header>
-    <nav class="navbar">
-        <ol>
-            <li class="navbar-item"><a href="#">Home</a>&nbsp;|&nbsp;</li>
-            <li class="navbar-item"><a href="./brewbot.html">BrewBot</a>&nbsp;|&nbsp;</li>
-            <li class="navbar-item"><a href="./jellyfin.html">Jellyfin</a>&nbsp;|&nbsp;</li>
-            <li class="navbar-item"><a href="#" onclick="alert('Coming soon');">TuneSync</a></li>
-        </ol>
+
+    <div id="top"></div>
+
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">simoni.dev</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutme">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-</header>
-<section class="content">
-    <div  class="portrait">
-        <img class="grow-anim" src="./assets/me.png" alt="Me!">
+
+    <div id="aboutme" class="container">
+        <h1 class="display-1 mb-3">About Me</h1>
+        <p>I'm a member of the Jellyfin Organization working mainly on the Android TV Client when I have time. 
+            Also a part of the SOCOM Cafe team where we have been working on reverse engineering and creating our own private game servers for the
+            SOCOM game series on the Playstation Portable system. Lately, I've been working on frontend projects getting more familiar with frameworks
+            like Angular and React.
+        </p>
     </div>
-    <h1>Chris Simoni</h1>
-    <h2>Aspiring Software Engineer</h2>
-    <p>I'm an aspiring software engineer currently enrolled in classes at Cowley County Community College.</p>
-    <div>
-        <img src="./assets/dog.jpg" class="left" style="height: 20vw; max-height: 200px; margin: 10px;" alt="" />
-        <p>I have many hobbies including fish keeping, model trains and programming. I enjoy making programs and messing with microcontrollers the most. I also like dogs.</p>
+
+    <div id="projects" class="container">
+        <h1 class="display-1 mb-3">Projects</h1>
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100">
+                    <img class="card-img-top img-fluid" src="https://simoni.dev/assets/freebrew.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title display-4">BrewBot</h4>
+                        <p class="card-text">An Android emulator automation program. Automate Android apps running
+                            BlueStacks using self made LUA scripts.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a class="btn btn-sm btn-success" target="_blank"
+                            href="https://bitbucket.org/TSP_Disconnected/brewbot">View on BitBucket</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100">
+                    <img class="card-img-top img-fluid" src="https://simoni.dev/assets/icon-transparent.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title display-4">Jellyfin</h4>
+                        <p class="card-text">Jellyfin is the volunteer-built media solution that puts you in control of
+                            your media. Stream to any device from your own server, with no strings attached. Your media,
+                            your server, your way.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a class="btn btn-sm btn-success" target="_blank" href="https://jellyfin.org/">View Website</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100">
+                    <img class="card-img-top cover-img"
+                        src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title display-4">TuneSync Server and Client</h4>
+                        <p class="card-text">TuneSync will index audio files on a server and keep them synced to any
+                            devices running the clients.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a class="btn btn-sm btn-success" target="_blank"
+                            href="https://github.com/MrChip53/tune-sync-api">View Server on GitHub</a>
+                        <a class="btn btn-sm btn-success" target="_blank"
+                            href="https://github.com/MrChip53/tune-sync-ionic-client">View Client on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100">
+                    <img class="card-img-top cover-img"
+                        src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title display-4">SOCOM Archive Manager</h4>
+                        <p class="card-text">A port of the original SOCOM Archive Project. Done in React with the end
+                            goal being an offline-capable client-sided SPA.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a class="btn btn-sm btn-success" target="_blank"
+                            href="https://github.com/socomcafe/archive-manager">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <img src="./assets/train.jpg" class="right" style="height: 20vw; max-height: 200px; margin: 10px;" alt="" />
-        <p>I am a part of the Jellyfin development team for the Android TV Client. I developed the BrewBot application as a way to learn C/C++ and the Win32 API.
-            I am working with a team on reversing the Sony SCE-RT library and making a custom server for PSP online games that use it.
-            When I can, I also am developing a music syncing application that will sync songs between a (self-hosted) server and any client device.</p>
+
+    <div id="skills" class="container">
+        <h1 class="display-1 mb-3">Skills</h1>
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title display-4">Languages</h4>
+                        <p class="card-text">C, C++, C#, HTML5, CSS3, JavaScript, TypeScript, Java, Kotlin, PHP, Python, SQL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title display-4">Frameworks</h4>
+                        <p class="card-text">Angular, React, .NET Core, Bootstrap 5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4"></div>
+        </div>
     </div>
-    <h3 style="clear: both;">Gits</h3>
-    <ul>
-        <li>
-            <span><a target="_blank" href="https://github.com/MrChip53">GitHub</a></span>
-        </li>
-        <li>
-            <span><a target="_blank" href="https://bitbucket.org/TSP_Disconnected/">BitBucket</a></span>
-        </li>
-        <li>
-            <span><a target="_blank" href="https://gitlab.com/MrChip53">GitLab</a></span>
-        </li>
-    </ul>
-    <h3>Top Projects</h3>
-    <ol>
-        <li>
-            <a target="_blank" href="https://github.com/jellyfin">Jellyfin, The Free Software Media System</a> (specifically the <a target="_blank" href="https://github.com/jellyfin/jellyfin-androidtv">Android TV Client</a>)
-        </li>
-        <li>
-            <a target="_blank" href="https://bitbucket.org/TSP_Disconnected/brewbot/">BrewBot</a>
-        </li>
-        <li>
-            <a target="_blank" href="https://github.com/MrChip53/tune-sync-api">TuneSync Server</a> and <a target="_blank" href="https://github.com/MrChip53/tune-sync-ionic-client">TuneSync Client</a>
-        </li>
-    </ol>
-    <h3>Contact Me</h3>
-    <ul>
-        <li>
-            <span>Email: <a target="_blank" href="mailto:chris@simoni.dev">chris@simoni.dev</a></span>
-        </li>
-        <li>
-            <span><a target="_blank" href="https://www.linkedin.com/in/christopher-simoni-46bb87215/">LinkedIn</a></span>
-        </li>
-    </ul>
-</section>
-<footer>
-    <div>This site is on <a href="https://github.com/MrChip53/simoni.dev">GitHub</a>!</div>
-    <div>Copyright &copy; 2021. Chris Simoni</div>
-</footer>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
