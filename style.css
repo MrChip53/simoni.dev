@@ -48,7 +48,12 @@ div#projects:before, div#aboutme:before, div#skills:before {
     margin-right: 0.5rem!important;
 }
 
-footer {
-    padding-top: 17px;
-    padding-bottom: 17px;
+.footer {
+    padding-top: 1.25rem!important;
+    padding-bottom: 1.25rem!important;
+}
+
+.navbar {
+    padding-top: 0.75rem!important;
+    padding-bottom: 0.75rem!important;
 }
