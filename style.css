@@ -16,7 +16,7 @@ body {
 
 @media only screen and (max-width: 374px) {
     .mb-xsm-1 {
-        margin-bottom: 0.25rem!important;
+        margin-bottom: 0.25rem !important;
     }
 }
 
@@ -30,4 +30,9 @@ div#projects:before, div#aboutme:before, div#skills:before, div#top:before {
     margin-top: -65px;
     visibility: hidden;
     content: "";
-  }
+}
+
+footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
