@@ -262,12 +262,12 @@
         crossorigin="anonymous"></script>
 
     <script>
-        window.onload = () => {
+        window.onload = function() {
             const collapseClick = () => { bsCollapse.toggle() };
 
             let lastWidth = window.innerWidth;
 
-            const resizeEvent = function() {
+            const resizeEvent = () => {
                 const width = window.innerWidth;
                 const breakPoint = 768; // greater or equal; disable
 
