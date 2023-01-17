@@ -263,6 +263,9 @@
 
     <script>
         window.onload = function() {
+            const menuToggle = document.getElementById('collapsibleNavId');
+            const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+
             const collapseClick = () => { bsCollapse.toggle() };
 
             let lastWidth = window.innerWidth;
