@@ -262,15 +262,41 @@
         crossorigin="anonymous"></script>
 
     <script>
-        const navLinks = document.querySelectorAll('.nav-item');
-        const menuToggle = document.getElementById('collapsibleNavId');
-        const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
-        navLinks.forEach((l) => {
-            l.addEventListener('click', () => { bsCollapse.toggle() })
-        });
+        window.onload = () => {
+            const collapseClick = () => { bsCollapse.toggle() };
 
-        const copyrightFooter = document.getElementById('copyrightFooter');
-        copyrightFooter.innerHTML = `&copy; ${new Date().getFullYear()}`;
+            let lastWidth = window.innerWidth;
+
+            const resizeEvent = () => {
+                const width = window.innerWidth;
+                const breakPoint = 768; // greater or equal; disable
+
+                if (width !== lastWidth) {
+                    if (width >= breakPoint && lastWidth < breakPoint) {
+                        console.log('Removing');
+                        const navLinks = document.querySelectorAll('.nav-item');
+                        navLinks.forEach((n) => {
+                            const newNode = n.cloneNode(true);
+                            n.parentNode.replaceChild(newNode, n);
+                        });
+                    } else if (width < breakPoint && lastWidth >= breakPoint) {
+                        console.log('Adding');
+                        const navLinks = document.querySelectorAll('.nav-item');
+                        navLinks.forEach((n) => {
+                            n.addEventListener('click', collapseClick);
+                        });
+                    }
+                }
+
+                lastWidth = width;
+            };
+
+            window.addEventListener('resize', resizeEvent);
+
+            const copyrightFooter = document.getElementById('copyrightFooter');
+            copyrightFooter.innerHTML = `&copy; ${new Date().getFullYear()}`;
+            resizeEvent();
+        };
     </script>
 </body>
 
