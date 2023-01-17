@@ -268,22 +268,20 @@
 
             const collapseClick = () => { bsCollapse.toggle() };
 
-            let lastWidth = window.innerWidth;
+            let lastWidth;
 
             const resizeEvent = () => {
                 const width = window.innerWidth;
                 const breakPoint = 768; // greater or equal; disable
 
                 if (width !== lastWidth) {
-                    if (width >= breakPoint && lastWidth < breakPoint) {
-                        console.log('Removing');
+                    if (width >= breakPoint && (!!!lastWidth || lastWidth < breakPoint)) {
                         const navLinks = document.querySelectorAll('.nav-item');
                         navLinks.forEach((n) => {
                             const newNode = n.cloneNode(true);
                             n.parentNode.replaceChild(newNode, n);
                         });
-                    } else if (width < breakPoint && lastWidth >= breakPoint) {
-                        console.log('Adding');
+                    } else if (width < breakPoint && (!!!lastWidth || lastWidth >= breakPoint)) {
                         const navLinks = document.querySelectorAll('.nav-item');
                         navLinks.forEach((n) => {
                             n.addEventListener('click', collapseClick);
